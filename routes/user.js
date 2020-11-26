@@ -13,7 +13,7 @@ const User = require("../model/User");
 router.post(
     "/signup",
     [
-      check("username", "Please Enter a Valid Username")
+      check("rollno", "Please Enter a Valid username")
           .not()
           .isEmpty(),
       check("email", "Please enter a valid email").isEmail(),
@@ -29,7 +29,7 @@ router.post(
         });
       }
       const {
-        username,
+        rollno,
         email,
         password
       } = req.body;
@@ -43,7 +43,7 @@ router.post(
           });
         }
         user = new User({
-          username,
+          rollno,
           email,
           password
         });
