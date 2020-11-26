@@ -73,3 +73,7 @@ router.post(
       }
     }
 );
+<<<<<<< HEAD
+=======
+module.exports = router;
+>>>>>>> fc44d872baae075281a80f9245d42cef9d0b36d9

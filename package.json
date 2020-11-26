@@ -16,7 +16,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.16",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "pug": "^3.0.0"
   },
   "description": "An online platform for test conduction",
   "main": "app.js",
