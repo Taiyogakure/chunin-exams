@@ -6,11 +6,29 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "^4.16.4",
+    "express-validator": "^6.7.0",
     "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.15",
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11"
-  }
+  },
+  "description": "An online platform for test conduction",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azanul/chunin-exams.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Azanul/chunin-exams/issues"
+  },
+  "homepage": "https://github.com/Azanul/chunin-exams#readme"
 }
