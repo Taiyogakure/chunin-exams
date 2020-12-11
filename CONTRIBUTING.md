@@ -16,17 +16,13 @@ changes into our repo.
 
 Some other points to follow:
 
- * Please base your changes on the `develop` branch.
+ * Please base your changes on the `master` branch.
 
  * Please follow the [code style requirements](#code-style).
 
  * Please include a [changelog entry](#changelog) with each PR.
 
  * Please [sign off](#sign-off) your contribution.
-
- * Please keep an eye on the pull request for feedback from the [continuous
-   integration system](#continuous-integration-and-testing) and try to fix any
-   errors that come up.
 
  * If you need to [update your PR](#updating-your-pull-request), just add new
    commits to your branch rather than rebasing.
@@ -69,11 +65,11 @@ to put together a release!
 
 ## Documentation
 
-There is a growing amount of documentation located in the [docs](docs)
+There is a growing amount of documentation located in the [docs](https://github.com/Taiyogakure/chunin-exams/blob/master/README.rst)
 directory. This documentation is intended primarily for sysadmins running their
 own instance, as well as developers interacting externally with
 Taiyogakure. [docs/dev](docs/dev) exists primarily to house documentation for]
-evelopers. [docs/admin_api](docs/admin_api) houses documentation
+developers. [docs/admin_api](docs/admin_api) houses documentation
 regarding Admin API, which is used mostly by sysadmins and external
 service developers.
 
