@@ -23,7 +23,7 @@ Tools used
 
 IDE 
 =========
-1.	**WebStorm**: A powerful IDE for modern JavaScript development with code completion and refactoring for JavaScript, TypeScript, and the most popular web frameworks.
+**WebStorm**: A powerful IDE for modern JavaScript development with code completion and refactoring for JavaScript, TypeScript, and the most popular web frameworks.
 
 Programming Language
 ====================
