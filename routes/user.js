@@ -6,7 +6,11 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
 const User = require("../model/User");
+const fs = require('fs');
+const execSync = require('child_process').execSync;
 const auth = require("../middleware/auth")
+const Feedback = require("../model/Feedback")
+const path = require('path');
 /**
  * @method - POST
  * @param - /signup
@@ -145,4 +149,86 @@ router.get("/me", auth, async (req, res) => {
     res.send({ message: "Error in Fetching user" });
   }
 });
+router.post(
+    "/feedback",
+    [
+
+    check("ux", "This field is required").isString(),
+    check("quesAsse", "This field is required").isString(),
+    check("stars", "This field is required").isNumeric(),
+
+      check("improve", "Minimum 10 characters").isString().isLength({min:10})
+    ],
+
+    async (req, res) => {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({
+          errors: errors.array()
+        });
+      }
+      const {
+        ux,
+        quesAsse,
+        stars,
+        improve
+      } = req.body;
+      try {
+        let fb = new Feedback({
+          ux,
+          quesAsse,
+          stars,
+          improve
+        });
+      await fb.save();
+      const payload = {
+        fb: {
+          id: fb.id
+
+        }
+      };
+      jwt.sign(
+          payload,
+          "randomString", {
+            expiresIn: 10000
+          },
+          (err, token) => {
+            if (err) throw err;
+            res.status(200).json({
+              token
+            });
+          }
+      );
+    }
+    catch (err)
+  {
+      console.log(err.message);
+      res.status(500).send("Error in Saving");
+  }
+    }
+);
+const CODE_FOLDER = "code";
+function testCode(req, res) {
+  let code = req.body["code"];
+  try {
+    fs.writeFileSync(path.join(__dirname, CODE_FOLDER, "input_code.py"), code);
+    const proc = execSync("python3 " + "routes\\" + path.join(CODE_FOLDER, "tests.py"));
+    const results = proc.toString();
+
+    return res.send(results);
+  } catch (error) {
+    console.log("An error occurred");
+    console.log(error);
+    return res.send("An error occurred.");
+  }
+}
+
+
+router.get('/', (req, res) => {
+  res.send("Hello world");
+});
+router.post('/test', testCode)
+
+module.exports= router;
+
 

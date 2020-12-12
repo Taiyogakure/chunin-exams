@@ -9,6 +9,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "^4.16.4",
     "express-validator": "^6.7.0",
@@ -16,7 +17,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.16",
     "morgan": "~1.9.1",
-    "pug": "^3.0.0"
+    "pug": "^3.0.0",
+    "python3": "0.0.1"
   },
   "description": "An online platform for test conduction",
   "main": "app.js",
