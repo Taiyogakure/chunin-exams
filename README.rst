@@ -24,10 +24,11 @@ Tech Stack
 •	**Express.js**: It is a back-end web application framework for Node.js, released as free and open-source software. It is designed for web apps and APIs. 
 •	**MongoDB**: It is a document database with the scalability and flexibility that we want with the querying and indexing that we need.
 
-.. image:: https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg 
-:height: 100px
-   :width: 200 px
-   :scale: 50 %
+
+.. figure:: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEQKr7IIHX50osjX-livC8V58s-zMt2ZWglQ&usqp=CAU?sanitize=true
+:width: 10pt
+.. figure:: https://logodix.com/logo/1764882.png?sanitize=true
+:width: 10pt
    
    
 Tools Used 
