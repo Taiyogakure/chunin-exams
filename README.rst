@@ -2,6 +2,21 @@
 Hi there 👋
 *************
 
+|Maintenance yes| |GitHub contributors| |GPLv3 license| 
+
+|_| |ForTheBadge uses-js| | |ForTheBadge built-with-love| |_|
+
+.. |ForTheBadge built-with-love| image:: http://ForTheBadge.com/images/badges/built-with-love.svg
+   :target: https://GitHub.com/Naereen/
+.. |ForTheBadge uses-js| image:: http://ForTheBadge.com/images/badges/uses-js.svg
+   :target: http://ForTheBadge.com
+.. |GPLv3 license| image:: https://img.shields.io/badge/License-GPLv3-blue.svg
+   :target: http://perso.crans.org/besson/LICENSE.html
+.. |Maintenance yes| image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
+   :target: https://GitHub.com/Taiyogakure/chunin-exams/graphs/commit-activity
+.. |GitHub contributors| image:: https://img.shields.io/github/contributors/Taiyogakure/chunin-exams.svg
+   :target: https://GitHub.com/Taiyogakure/chunin-exams/graphs/contributors/
+ 
 .. contents::
 
 Introduction
@@ -41,11 +56,14 @@ Taiyogakure/chunin-exams is licensed under the
 
 Contributors
 ============
-- `Azanul Haque`_
-- `Azhar Mallick`_
-- `Ambareen Azam`_
-- `Wajid Hussain`_
+- `Azanul Haque`_ 
 .. _Azanul Haque: https://github.com/Azanul
-.. _Azhar Mallick: https://github.com/AzharMallick
+- `Ambareen Azam`_
 .. _Ambareen Azam: https://github.com/Ambareen09
+
+..
+   [1] - `Azhar Mallick`_
+.. _Azhar Mallick: https://github.com/AzharMallick
+..
+   [2] - `Wajid Hussain`_
 .. _Wajid Hussain: https://github.com/iamswh
