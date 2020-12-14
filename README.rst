@@ -24,12 +24,25 @@ Tech Stack
 •	**Express.js**: It is a back-end web application framework for Node.js, released as free and open-source software. It is designed for web apps and APIs. 
 •	**MongoDB**: It is a document database with the scalability and flexibility that we want with the querying and indexing that we need.
 
+.. image:: https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg 
+:height: 100px
+   :width: 200 px
+   :scale: 50 %
+   
+   
 Tools Used 
 ==========
 
 • **Jira**: Proprietary issue tracking product developed by Atlassian that allows bug tracking and project management.
 • **WebStorm**: A powerful IDE for modern JavaScript development with code completion and refactoring for JavaScript, TypeScript, and the most popular web frameworks.
 •	**Postman**: A tool for API testing.
+
+License
+=========
+Taiyogakure/chunin-exams is licensed under the
+- `GNU General Public License v3.0`_
+
+.. _GNU General Public License v3.0: https://github.com/Taiyogakure/chunin-exams/blob/master/LICENSE
 
 Contributors
 ============
