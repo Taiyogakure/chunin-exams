@@ -1,6 +1,6 @@
-//FILENAME : exam.js
+//FILENAME : Test.js
 const mongoose = require("mongoose");
-const fbSchema = mongoose.Schema({
+const testSchema = mongoose.Schema({
     rollno: {
         type: String,
         required: true
@@ -15,4 +15,4 @@ const fbSchema = mongoose.Schema({
     }
 });
 // export model user with UserSchema
-module.exports = mongoose.model("exam", fbSchema);
+module.exports = mongoose.model("exam", testSchema);
