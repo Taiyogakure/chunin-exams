@@ -1,6 +1,7 @@
-//FILENAME : User.js
+//FILENAME : admin.js
 const mongoose = require("mongoose");
-const AdminSchema = mongoose.Schema({
+const adminSchema = mongoose.Schema({
+
     email: {
         type: String,
         required: true
@@ -10,5 +11,5 @@ const AdminSchema = mongoose.Schema({
         required: true
     },
 });
-// export model user with UserSchema
-module.exports = mongoose.model("user", AdminSchema);
+// export model user with adminSchema
+module.exports = mongoose.model("admin", adminSchema);

@@ -1,4 +1,4 @@
-//FILENAME : Feedback.js
+//FILENAME : Ques.js
 const mongoose = require("mongoose");
 const qSchema = mongoose.Schema({
     qid: {
@@ -21,6 +21,7 @@ const qSchema = mongoose.Schema({
         type: Array,
         required: false
     }
+
 });
 // export model user with UserSchema
 module.exports = mongoose.model("Ques", qSchema);

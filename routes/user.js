@@ -12,6 +12,7 @@ const auth = require("../middleware/auth");
 const Feedback = require("../model/Feedback");
 const Ques = require("../model/Ques");
 const path = require('path');
+const Resp = require("../model/Resp");
 /**
  * @method - POST
  * @param - /signup
@@ -351,5 +352,111 @@ router.put(
         }
     }
 );
+
+router.post(
+    "/Resp",
+    [
+        check("qid", "This field is required").isNumeric().notEmpty(),
+        check("response", "This field is required").isString().notEmpty(),
+    ],
+
+    async (req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({
+                errors: errors.array()
+            });
+        }
+        const {
+            qid,
+            response,
+        } = req.body;
+        try {
+            let rs = new Resp({
+                qid,
+                response,
+            });
+            await rs.save();
+            const payload = {
+                rs: {
+                    id: rs.id
+                }
+            };
+            jwt.sign(
+                payload,
+                "randomString", {
+                    expiresIn: 10000
+                },
+                (err, token) => {
+                    if (err) throw err;
+                    res.status(200).json({
+                        token
+                    });
+                }
+            );
+        } catch (err) {
+            console.log(err.message);
+            res.status(500).send("Error in Saving");
+        }
+    }
+);
+router.put(
+    "/Resp",
+    [
+        check("qid", "This field is required").isNumeric().notEmpty(),
+        check("response", "This field is required").isString().notEmpty(),
+    ],
+
+    async (req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({
+                errors: errors.array()
+            });
+        }
+        const {
+            qid,
+            response,
+
+        } = req.body;
+        try {
+            let rs = new Resp({
+                qid,
+                response,
+            });
+            console.log();
+            await Resp.findOneAndUpdate(
+                {qid: rs.qid},
+                {
+                    $set: {
+                        response: rs.response,
+                    }
+                }).then(() => {
+                console.log("updated")
+            });
+            const payload = {
+                rs: {
+                    id: rs.id
+                }
+            };
+            jwt.sign(
+                payload,
+                "randomString", {
+                    expiresIn: 10000
+                },
+                (err, token) => {
+                    if (err) throw err;
+                    res.status(200).json({
+                        token
+                    });
+                }
+            );
+        } catch (err) {
+            console.log(err.message);
+            res.status(500).send("Error in Saving");
+        }
+    }
+);
+
 
 module.exports = router;
