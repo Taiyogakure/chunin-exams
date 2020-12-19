@@ -65,7 +65,7 @@ router.post(
             };
             jwt.sign(
                 payload,
-                "randomString", {
+                "secret", {
                     expiresIn: 10000
                 },
                 (err, token) => {
@@ -81,6 +81,11 @@ router.post(
         }
     }
 );
+/**
+ * @method - POST
+ * @param - /log in
+ * @description - User log in
+ */
 
 router.post(
     "/login",
@@ -151,6 +156,11 @@ router.get("/me", auth, async (req, res) => {
         res.send({message: "Error in Fetching user"});
     }
 });
+/**
+ * @method - POST
+ * @param - /feedback
+ * @description - Get user feedback
+ */
 router.post(
     "/feedback",
     [
@@ -222,11 +232,18 @@ function testCode(req, res) {
     }
 }
 
+/**
+ * @method - POST
+ * @param - /test
+ * @description - User running test code against test cases
+ */
 
-router.get('/', (req, res) => {
-    res.send("Hello world");
-});
 router.post('/test', testCode);
+/**
+ * @method - POST
+ * @param - /Question
+ * @description - admin question paper
+ */
 
 router.post(
     "/Ques",
@@ -284,6 +301,11 @@ router.post(
         }
     }
 );
+/**
+ * @method - GET
+ * @param - /ques
+ * @description - User Get question paper
+ */
 
 router.get("/Ques", auth,
     async (req, res) => {
@@ -296,6 +318,11 @@ router.get("/Ques", auth,
             });
     }
 );
+/**
+ * @method - PUT
+ * @param - /update
+ * @description - Admin update quest ppr
+ */
 
 router.put(
     "/update",
@@ -303,6 +330,7 @@ router.put(
         check("qid", "This field is required").isNumeric().notEmpty(),
         check("ques", "This field is required").isString().notEmpty(),
         check("type", "This field is required").isString().notEmpty(),
+        check("testcase", "This field is required").notEmpty(),
         check("ans", "This field is required").notEmpty(),
     ],
 
@@ -362,6 +390,11 @@ router.put(
         }
     }
 );
+/**
+ * @method - POST
+ * @param - /Resp
+ * @description - User POST response
+ */
 
 router.post(
     "/Resp",
@@ -410,6 +443,11 @@ router.post(
         }
     }
 );
+/**
+ * @method - PUT
+ * @param - /Resp
+ * @description - User PUT response
+ */
 router.put(
     "/Resp",
     [
@@ -467,6 +505,4 @@ router.put(
         }
     }
 );
-
-
 module.exports = router;
