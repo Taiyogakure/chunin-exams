@@ -7,9 +7,9 @@ Hi there 👋
 |_| |ForTheBadge uses-js| | |ForTheBadge built-with-love| |_|
 
 .. |ForTheBadge built-with-love| image:: http://ForTheBadge.com/images/badges/built-with-love.svg
-   :target: https://GitHub.com/Naereen/
+   :target: #
 .. |ForTheBadge uses-js| image:: http://ForTheBadge.com/images/badges/uses-js.svg
-   :target: http://ForTheBadge.com
+   :target: #
 .. |GPLv3 license| image:: https://img.shields.io/badge/License-GPLv3-blue.svg
    :target: http://perso.crans.org/besson/LICENSE.html
 .. |Maintenance yes| image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
