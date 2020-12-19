@@ -85,8 +85,8 @@ router.post(
 
 /**
  * @method - POST
- * @param - /log in
- * @description - User log in
+ * @param - /login
+ * @description - User Log in
  */
 router.post(
     "/login",
@@ -146,8 +146,8 @@ router.post(
 
 /**
  * @method - POST
- * @description - Get LoggedIn User
  * @param - /user/me
+ * @description - Get LoggedIn User
  */
 router.get("/me", auth, async (req, res) => {
     try {
@@ -162,7 +162,7 @@ router.get("/me", auth, async (req, res) => {
 /**
  * @method - POST
  * @param - /feedback
- * @description - Get user feedback
+ * @description - Post User Feedback
  */
 router.post(
     "/feedback",
@@ -242,70 +242,8 @@ function testCode(req, res) {
 }
 
 /**
- * @method - POST
- * @param - /Question
- * @description - admin question paper
- */
-router.post(
-    "/Ques",
-    [
-        check("qid", "This field is required").isNumeric().notEmpty(),
-        check("ques", "This field is required").isString().notEmpty(),
-        check("type", "This field is required").isString().notEmpty(),
-        check("ans", "This field is required").notEmpty(),
-        check("testcase", "This field is required").notEmpty()
-    ],
-
-    async (req, res) => {
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.status(400).json({
-                errors: errors.array()
-            });
-        }
-        const {
-            qid,
-            ques,
-            type,
-            ans,
-            testcase
-        } = req.body;
-        try {
-            let qu = new Ques({
-                qid,
-                ques,
-                type,
-                ans,
-                testcase
-            });
-            await qu.save();
-            const payload = {
-                qu: {
-                    id: qu.id
-                }
-            };
-            jwt.sign(
-                payload,
-                "secret", {
-                    expiresIn: 10000
-                },
-                (err, token) => {
-                    if (err) throw err;
-                    res.status(200).json({
-                        token
-                    });
-                }
-            );
-        } catch (err) {
-            console.log(err.message);
-            res.status(500).send("Error in Saving");
-        }
-    }
-);
-
-/**
  * @method - GET
- * @param - /ques
+ * @param - /Ques
  * @description - User Get QPaper
  */
 router.get("/Ques", auth,
@@ -317,78 +255,6 @@ router.get("/Ques", auth,
                     result
                 });
             });
-    }
-);
-
-/**
- * @method - PUT
- * @param - /update
- * @description - Admin Update QPaper
- */
-router.put(
-    "/update",
-    [
-        check("qid", "This field is required").isNumeric().notEmpty(),
-        check("ques", "This field is required").isString().notEmpty(),
-        check("type", "This field is required").isString().notEmpty(),
-        check("testcase", "This field is required").notEmpty(),
-        check("ans", "This field is required").notEmpty(),
-    ],
-
-    async (req, res) => {
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.status(400).json({
-                errors: errors.array()
-            });
-        }
-        const {
-            qid,
-            ques,
-            type,
-            ans,
-            testcase
-        } = req.body;
-        try {
-            let qu = new Ques({
-                qid,
-                ques,
-                type,
-                ans,
-                testcase
-            });
-            console.log();
-            await Ques.findOneAndUpdate(
-                {qid: qu.qid},
-                {
-                    $set: {
-                        ques: qu.ques,
-                        type: qu.type,
-                        ans: qu.ans,
-                        testcase: qu.testcase
-                    }
-                });
-            const payload = {
-                qu: {
-                    id: qu.id
-                }
-            };
-            jwt.sign(
-                payload,
-                "randomString", {
-                    expiresIn: 10000
-                },
-                (err, token) => {
-                    if (err) throw err;
-                    res.status(200).json({
-                        token
-                    });
-                }
-            );
-        } catch (err) {
-            console.log(err.message);
-            res.status(500).send("Error in Saving");
-        }
     }
 );
 
