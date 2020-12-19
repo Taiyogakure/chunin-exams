@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
         const token = req.header("token");
     if (!token) return res.status(401).json({ message: "Auth Error" });
     try {
-        const decoded = jwt.verify(token, "ccret");
+        const decoded = jwt.verify(token, "secret");
         req.user = decoded.user;
         next();
     } catch (e) {

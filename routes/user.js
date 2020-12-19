@@ -118,7 +118,7 @@ router.post(
             };
             jwt.sign(
                 payload,
-                "nodbon",
+                "secret",
                 {
                     expiresIn: 3600
                 },
@@ -146,7 +146,7 @@ router.get("/me", auth, async (req, res) => {
     try {
         // request.user is getting fetched from Middleware after token authentication
         const user = await User.findById(req.user.id);
-        res.json(user);
+        await res.json(user);
     } catch (e) {
         res.send({message: "Error in Fetching user"});
     }
@@ -189,7 +189,7 @@ router.post(
             };
             jwt.sign(
                 payload,
-                "randomString", {
+                "secret", {
                     expiresIn: 10000
                 },
                 (err, token) => {
@@ -268,7 +268,7 @@ router.post(
             };
             jwt.sign(
                 payload,
-                "randomString", {
+                "secret", {
                     expiresIn: 10000
                 },
                 (err, token) => {
@@ -282,6 +282,18 @@ router.post(
             console.log(err.message);
             res.status(500).send("Error in Saving");
         }
+    }
+);
+
+router.get("/Ques", auth,
+    async (req, res) => {
+        Ques.find({}, {"ans": false},
+            function (err, result) {
+                if (err) throw err;
+                res.status(200).json({
+                    result
+                });
+            });
     }
 );
 
@@ -326,9 +338,7 @@ router.put(
                         ans: qu.ans,
                         testcase: qu.testcase
                     }
-                }).then(() => {
-                console.log("updated")
-            });
+                });
             const payload = {
                 qu: {
                     id: qu.id
