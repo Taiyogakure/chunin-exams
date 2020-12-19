@@ -13,6 +13,7 @@ const Feedback = require("../model/Feedback");
 const Ques = require("../model/Ques");
 const path = require('path');
 const Resp = require("../model/Resp");
+
 /**
  * @method - POST
  * @param - /signup
@@ -81,12 +82,12 @@ router.post(
         }
     }
 );
+
 /**
  * @method - POST
  * @param - /log in
  * @description - User log in
  */
-
 router.post(
     "/login",
     [
@@ -142,6 +143,7 @@ router.post(
         }
     }
 );
+
 /**
  * @method - POST
  * @description - Get LoggedIn User
@@ -156,6 +158,7 @@ router.get("/me", auth, async (req, res) => {
         res.send({message: "Error in Fetching user"});
     }
 });
+
 /**
  * @method - POST
  * @param - /feedback
@@ -215,8 +218,14 @@ router.post(
         }
     }
 );
-const CODE_FOLDER = "code";
 
+/**
+ * @method - POST
+ * @param - /test
+ * @description - User running test code against test cases
+ */
+router.post('/test', testCode);
+const CODE_FOLDER = "code";
 function testCode(req, res) {
     let code = req.body["code"];
     try {
@@ -234,17 +243,9 @@ function testCode(req, res) {
 
 /**
  * @method - POST
- * @param - /test
- * @description - User running test code against test cases
- */
-
-router.post('/test', testCode);
-/**
- * @method - POST
  * @param - /Question
  * @description - admin question paper
  */
-
 router.post(
     "/Ques",
     [
@@ -301,12 +302,12 @@ router.post(
         }
     }
 );
+
 /**
  * @method - GET
  * @param - /ques
- * @description - User Get question paper
+ * @description - User Get QPaper
  */
-
 router.get("/Ques", auth,
     async (req, res) => {
         Ques.find({}, {"ans": false},
@@ -318,12 +319,12 @@ router.get("/Ques", auth,
             });
     }
 );
+
 /**
  * @method - PUT
  * @param - /update
- * @description - Admin update quest ppr
+ * @description - Admin Update QPaper
  */
-
 router.put(
     "/update",
     [
@@ -390,12 +391,12 @@ router.put(
         }
     }
 );
+
 /**
  * @method - POST
  * @param - /Resp
  * @description - User POST response
  */
-
 router.post(
     "/Resp",
     [
@@ -443,6 +444,7 @@ router.post(
         }
     }
 );
+
 /**
  * @method - PUT
  * @param - /Resp
@@ -505,4 +507,5 @@ router.put(
         }
     }
 );
+
 module.exports = router;
