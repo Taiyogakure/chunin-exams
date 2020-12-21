@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \" No test specified\" && exit 1",
+    "start": "node app.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
