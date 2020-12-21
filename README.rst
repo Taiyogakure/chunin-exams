@@ -62,5 +62,5 @@ Contributors
 .. _Ambareen Azam: https://github.com/Ambareen09
 - `Azhar Mallick`_
 .. _Azhar Mallick: https://github.com/AzharMallick
-- `Wajid Hussain`_
-.. _Wajid Hussain: https://github.com/iamswh
+- `Syed Wajid Hossain`_
+.. _Syed Wajid Hossain: https://github.com/iamswh
