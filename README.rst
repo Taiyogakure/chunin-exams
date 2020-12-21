@@ -60,10 +60,7 @@ Contributors
 .. _Azanul Haque: https://github.com/Azanul
 - `Ambareen Azam`_
 .. _Ambareen Azam: https://github.com/Ambareen09
-
-..
-   [1] - `Azhar Mallick`_
+- `Azhar Mallick`_
 .. _Azhar Mallick: https://github.com/AzharMallick
-..
-   [2] - `Wajid Hussain`_
+- `Wajid Hussain`_
 .. _Wajid Hussain: https://github.com/iamswh
