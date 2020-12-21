@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+#fb {
+	* {
+		box-sizing: border-box;
+	}
+
+	font-family: 'Montserrat',
+	sans-serif;
+	background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ff6fad95104341.5e938b2c0c23c.gif") no-repeat;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	height:100vh;
+	width: 100vw;
+	padding: 100px 50px;
+
+
+	.htag {
+		font-weight: bold;
+		margin: 0;
+		color: #dc2f02;
+	}
+
+	p {
+		font-size: 18px;
+		font-weight: 100;
+		line-height: 20px;
+		letter-spacing: 0.5px;
+		margin: 20px 0 30px;
+	}
+	button {
+		border-radius: 20px;
+		border: 1px solid #dc2f02;
+		background-color: #dc2f02;
+		color: #FFF;
+		font-size: 12px;
+		font-weight: bold;
+		padding: 12px 45px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		transition: transform 80ms ease-in;
+		cursor: pointer;
+	}
+
+	button:active {
+		transform: scale(0.95);
+	}
+
+	button:focus {
+		outline: none;
+	}
+
+
+	form {
+		background: rgba(255, 255, 255, 0.20);
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		backdrop-filter: blur(6.0px);
+		-webkit-backdrop-filter: blur(6.0px);
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 0 50px;
+	
+		height: 100%;
+		text-align: center;
+	}
+
+	input {
+		background: rgba(255, 255, 255, 0.40);
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		backdrop-filter: blur(8.5px);
+		-webkit-backdrop-filter: blur(8.5px);
+		border-radius: 10px;
+		border: none;
+		padding: 12px 15px;
+		margin: 8px 0;
+		width: 100%;
+	}
+
+	textarea {
+		background: rgba(255, 255, 255, 0.40);
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		backdrop-filter: blur(8.5px);
+		-webkit-backdrop-filter: blur(8.5px);
+		border-radius: 10px;
+		border: none;
+		padding: 12px 15px;
+		margin: 8px 0;
+		height: 20%;
+		width: 100%;
+	}
+
+	input[type="radio"] {
+		display: none;
+	}
+
+	.star {
+		cursor: pointer;
+		transition: 0.3s;
+		color: #e4e5e9;
+	}
+
+	.cont {
+		border-radius: 10px;
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+			0 10px 10px rgba(0, 0, 0, 0.22);
+		position: absolute;
+		overflow: hidden;
+		width: 468px;
+		max-width: 100%;
+		min-height: 480px;
+	}
+
+	.form-cont {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		transition: all 0.6s ease-in-out;
+	}
+
+}
