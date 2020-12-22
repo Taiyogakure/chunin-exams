@@ -228,9 +228,16 @@ router.post('/test', testCode);
 const CODE_FOLDER = "code";
 function testCode(req, res) {
     let code = req.body["code"];
+    let lang = req.body["lang"];
     try {
-        fs.writeFileSync(path.join(__dirname, CODE_FOLDER, "input_code.py"), code);
-        const proc = execSync("python3 " + "routes\\" + path.join(CODE_FOLDER, "tests.py"));
+        if (lang === "PYTHON") {
+            fs.writeFileSync(path.join(__dirname, CODE_FOLDER, "input_code.py"), code);
+            const proc = execSync("python3 " + "routes\\" + path.join(CODE_FOLDER, "tests.py"));
+        }
+        else if (lang === "C") {
+            fs.writeFileSync(path.join(__dirname, CODE_FOLDER, "input_code.c"), code);
+            const proc = execSync("gcc " + "routes\\" + path.join(CODE_FOLDER, "tests.c"));
+        }
         const results = proc.toString();
 
         return res.send(results);

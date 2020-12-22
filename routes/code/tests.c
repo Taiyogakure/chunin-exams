@@ -1,4 +1,4 @@
-import sys
+#include “input_code.c”
 
 
 def get_test_cases():
@@ -32,12 +32,4 @@ def test_code():
     print("Test cases not passed:", ", ".join(failed_test_cases))
 
 if __name__ == '__main__':
-  print(sys.argv[1])
-  if sys.argv[1] == "PYTHON":
-      from input_code import solution
-  elif sys.argv[1] == "C":
-      from ctypes import *
-      so_file = "/input_code.so"
-      print('C')
-      solution = CDLL(so_file)
   test_code()
