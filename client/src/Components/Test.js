@@ -4,7 +4,7 @@ import './Test.scss';
 
 export default function Test() {
     return(
-        <body id="dash">
+        <body id="exam">
             <header>
                 <a href="#" className="logo">Chunin Exam</a>
                 <ul>

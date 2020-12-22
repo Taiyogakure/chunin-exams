@@ -4,6 +4,7 @@ import SignUp from "./Components/SignUp";
 import Feedback from "./Components/Feedback";
 import Login from "./Components/Login";
 import Test from "./Components/Test";
+import Dashboard from "./Components/Dashboard";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path='/Components/Feedback' component={Feedback} />
           <Route path='/Components/Login' component={Login} />
           <Route path='/Components/Test' component={Test} />
+          <Route path='/Components/Dashboard' component={Dashboard} />
         </switch>
       </main>
 
