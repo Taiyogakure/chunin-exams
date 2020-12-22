@@ -20,8 +20,17 @@
     margin: 5px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    transition: transform 80ms ease-in;
     cursor: pointer;
   }
+
+  #end:active {
+		transform: scale(0.95);
+	}
+
+	#end:focus {
+		outline: none;
+	}
 
   header {
     position: relative;

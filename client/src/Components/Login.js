@@ -29,7 +29,7 @@ export default class Login extends React.Component {
                     <div className="form-container sign-up-container">
                         <form action="#">
                             <h1>Chunin Exam</h1>
-                            <p>Login to become Chunin You Genin</p>
+                            <p>Login You Genin</p>
                             <input name="email" type="email" 
                             placeholder="Email" 
                             value={this.state.email} 
