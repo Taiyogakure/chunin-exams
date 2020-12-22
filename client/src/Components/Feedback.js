@@ -39,7 +39,7 @@ export default function Feedback() {
                             <h1 className="htag">Give Us Feedback</h1>
                             <p>Help Us Improve</p>
                             <div>
-                                <span>Overall PLatform: </span>
+                                <span>Overall Platform: </span>
                                 {[...Array(5)].map((stars, i) => {
                                     const starsValue = i + 1;
                                     return (
