@@ -57,7 +57,7 @@ export default class SignUp extends React.Component {
                         </form>
                     </div>
                     <div className="pic-container">
-                        <img src="https://images.unsplash.com/photo-1488381397757-59d6261610f4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTB8fG1vdGl2YXRpb25hbHxlbnwwfDF8MHw%3D&auto=format&fit=crop&w=500&q=60" alt="side-pic" />
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ff6fad95104341.5e938b2c0c23c.gif" alt="side-pic" />
                     </div>
                 </div>
             </body>
