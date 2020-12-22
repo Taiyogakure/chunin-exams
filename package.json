@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "test": "echo \" No test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
