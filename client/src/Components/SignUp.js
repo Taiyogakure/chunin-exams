@@ -16,7 +16,14 @@ export default class SignUp extends React.Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        console.log(JSON.stringify(this.state));
+        fetch("http://localhost:4000/user/signup", {
+                method: 'post',
+                body: JSON.stringify(this.state),
+            }).then(res => {
+                console.log(res);
+                return res.json()
+            });
         this.setState({
             rollno: '',
             email: '',
