@@ -23,6 +23,25 @@
 		color: #dc2f02;
 	}
 
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		width: 12px;
+		background: crimson;
+		border-left: 0 solid white;
+		border-right: 0 solid white;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: cyan;
+		width: 0;
+		height: 35%;
+		transition: 0.5s ease;
+		cursor: pointer;
+	}
+
 	p {
 		font-size: 20px;
 		font-weight: 100;

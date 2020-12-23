@@ -82,17 +82,21 @@
     color: red;
   }
 
-
   #quest {
     display: flex;
-    background-color:#12ec98;
+    background: url("ZZZZZ510.jpg") no-repeat;
+	  background-size: cover;
   }
 
   #quest div {
-    background-color: #f1f1f1;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
     margin: 10px;
     padding: 30px;
-    font-size: 15px;
+    font-size: 20px;
   }
 
   #lefty{
@@ -103,13 +107,18 @@
   }
 
   #lefty a {
-    color: #2f2f2f;
+    color: white;
     background-color: transparent;
     text-decoration: none;
     padding-bottom: 5px;
   }
 
+  ol {
+    color: white;
+  }
+
   #righty {
+    color: white;
     width: 80%;
     max-height: 590px;
     position: relative;
@@ -159,5 +168,25 @@
     color: white;
     float: down;
   }
+
+  ::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		width: 12px;
+		background: white;
+		border-left: 0 solid white;
+		border-right: 0 solid white;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(54,54,226,1) 35%, rgba(0,212,255,1) 100%);
+		width: 0;
+		height: 25%;
+		transition: 0.5s ease;
+		cursor: pointer;
+	}
 
 }
