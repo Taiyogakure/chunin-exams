@@ -9,4 +9,78 @@
   
     font-family: 'Montserrat',
     sans-serif;
+
+    #logout {
+      border: 2px solid #dc2f02;
+      background-color: #fff;
+      border-radius: 40px;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 10px;
+      margin: 5px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform 80ms ease-in;
+      cursor: pointer;
+    }
+  
+    #logout:active {
+      transform: scale(0.95);
+    }
+  
+    #logout:focus {
+      outline: none;
+    }
+  
+    header {
+      position: relative;
+      z-index: 1000;
+      width: 100%;
+      display: flex;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      height: 25px;
+      padding: 35px 100px;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 5px 10px 0px #aaa;
+    }
+  
+    header .logo {
+      color: #2f2f2f;
+      font-size: 24px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  
+    header ul {
+      position: relative;
+      display: flex;
+    }
+  
+    header ul li {
+      position: relative;
+      list-style: none;
+    }
+  
+    header ul li a {
+      position: relative;
+      display: inline-block;
+      margin: 0 10px;
+      color: #dc2f02;
+      text-decoration: none;
+    }
+
+    section {
+      height: 612px;
+    }
+
+    #ver {
+      background-color: #2f2f2f;
+      padding: 5px 0;
+      text-align: center;
+      color: white;
+      //float: bottom;
+    }
 }
