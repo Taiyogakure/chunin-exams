@@ -72,6 +72,31 @@
       text-decoration: none;
     }
 
+    .side-nav {
+      height: 612px;
+      width: 248px;
+      position: fixed;
+      z-index: 1;
+      top: 80px;
+      left: 0;
+      background-color: darkblue;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+
+    .side-nav a {
+      text-decoration: none;
+      color: darkgrey;
+      display: block;
+      font-size: 18px;
+      text-transform: uppercase;
+      padding: 20px;
+    }
+
+    .side-nav a:hover {
+      color: #dc2f02;
+    }
+
     section {
       height: 612px;
     }

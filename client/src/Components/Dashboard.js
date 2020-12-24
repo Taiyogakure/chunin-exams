@@ -10,8 +10,11 @@ export default function Dashboard() {
                     <li><button type="submit" id="logout"><a href="#">Logout</a></button></li>
                 </ul>
             </header>
-            <section>
-                waon chika waon waon!!!!
+            <div className="side-nav">
+                <a href="#leaderboard">LeaderBoard</a>
+                <a href="#Q">Questions</a>
+            </div>
+            <section className="conts">
 
             </section>
             <footer id="ver">Version 1.0</footer>
