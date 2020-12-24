@@ -5,22 +5,36 @@ export default class Login extends React.Component {
     state = {
         email: '',
         password: ''
-    }
+    };
 
     change = e => {
         this.setState({
             [e.target.name]: e.target.value
         });
-    }
+    };
 
     onSubmit = (e) => {
         e.preventDefault();
         console.log(this.state);
+        fetch("http://localhost:4000/user/login", {
+            headers: {
+                "Content-Type": "application/json"
+            },
+            method: 'post',
+            body: JSON.stringify(this.state),
+        }).then(res => {
+            console.log(res);
+            return res.json()
+        }).catch(err => {
+                console.log(err);
+                return err.json()
+            }
+        );
         this.setState({
             email: '',
             password: ''
         })
-    }
+    };
 
     render() {
         return(
