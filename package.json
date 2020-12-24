@@ -22,9 +22,11 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.16",
     "morgan": "~1.9.1",
+    "node-sass": "^4.14.1",
     "nodemon": "^2.0.6",
     "pug": "^3.0.0",
-    "python3": "0.0.1"
+    "python3": "0.0.1",
+    "sass": "^1.30.0"
   },
   "description": "An online platform for test conduction",
   "main": "app.js",
