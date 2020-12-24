@@ -43,7 +43,7 @@ export default class Login extends React.Component {
                         </form>
                     </div>
                     <div className="pic-container">
-                        <img src="https://im6.ezgif.com/tmp/ezgif-6-e1ee2153cef2.gif" alt="side-pic" />
+                        <img src="https://media.discordapp.net/attachments/781865722091405313/791734477927219210/render_dribbble_3_1_1.gif" alt="side-pic" />
                     </div>
                 </div>
             </body>
