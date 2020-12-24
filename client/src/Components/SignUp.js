@@ -6,13 +6,13 @@ export default class SignUp extends React.Component {
         rollno: '',
         email: '',
         password: ''
-    }
+    };
 
     change = e => {
         this.setState({
             [e.target.name]: e.target.value
         });
-    }
+    };
 
     onSubmit = (e) => {
         e.preventDefault();
@@ -34,7 +34,7 @@ export default class SignUp extends React.Component {
             email: '',
             password: ''
         })
-    }
+    };
 
     render() {
         return (
