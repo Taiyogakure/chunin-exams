@@ -10,90 +10,44 @@
     font-family: 'Montserrat',
     sans-serif;
 
-    #logout {
-      border: 2px solid #dc2f02;
-      background-color: #fff;
-      border-radius: 40px;
-      font-size: 13px;
-      font-weight: bold;
-      padding: 10px;
-      margin: 5px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: transform 80ms ease-in;
-      cursor: pointer;
-    }
-  
-    #logout:active {
-      transform: scale(0.85);
-    }
-  
-    #logout:focus {
-      outline: none;
-    }
-  
-    header {
-      position: relative;
-      z-index: 1000;
-      width: 100%;
-      display: flex;
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      height: 25px;
-      padding: 35px 100px;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0px 5px 10px 0px #aaa;
-    }
-  
-    header .logo {
-      color: #2f2f2f;
-      font-size: 24px;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-  
-    header ul {
-      position: relative;
-      display: flex;
-    }
-  
-    header ul li {
-      position: relative;
-      list-style: none;
-    }
-  
-    header ul li a {
-      position: relative;
-      display: inline-block;
-      margin: 0 10px;
-      color: #dc2f02;
-      text-decoration: none;
-    }
-
     .conts {
       display: flex;
       flex-direction: row;
-      height: 612px;
-      margin-bottom: 2px;
+      height: auto;
+      //margin-bottom: 2px;
+      overflow: auto;
     }
 
     .side-nav {
-      height: 612px;
+      height: auto;
       margin-right: 2px;
-      top: 80px;
+      top: 0px;
       background-color: darkblue;
       padding: 10px;
       width: 20%;
+      position: block;
     }
 
+    .side-nav h2{
+      display: block;
+      padding: 20px 20px;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    span {
+      color:  #dc2f02;
+      font-size: 35px;
+    }
     .side-nav a {
       text-decoration: none;
       color: darkgrey;
       display: block;
-      font-size: 18px;
+      font-size: 15px;
       text-align: center;
+      letter-spacing: 2px;
       text-transform: uppercase;
       padding: 15px;
       margin: 10px;
@@ -104,14 +58,35 @@
       color: #dc2f02;
     }
 
-    .table {
-      width: 80%;
-      height: auto;
+    .side-nav button {
+      text-decoration: none;
+      background-color: darkblue;
+      color: darkgrey;
+      display: block;
+      font-size: 15px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 15px;
+      margin: 10px;
+      border: 1px solid #dc2f02;
+    }
+
+    button:hover, button:focus {
+    color: #dc2f02;
+    outline: none;
+    }
+
+    button:active {
+      transform: scale(0.9);
     }
 
     .table {
-      //align-items: center;
-      display: flex;
+      width: 80%;
+      height: auto;
+      margin: 10px;
+      align-items: column;
+      display: block;
     }
 
     .lead-pic {
@@ -125,5 +100,6 @@
       padding: 5px 0;
       text-align: center;
       color: white;
+      width: 100%;
     }
 }
