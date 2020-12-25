@@ -25,7 +25,7 @@
     }
   
     #logout:active {
-      transform: scale(0.95);
+      transform: scale(0.85);
     }
   
     #logout:focus {
@@ -72,16 +72,20 @@
       text-decoration: none;
     }
 
+    .conts {
+      display: flex;
+      flex-direction: row;
+      height: 612px;
+      margin-bottom: 2px;
+    }
+
     .side-nav {
       height: 612px;
-      width: 248px;
-      position: fixed;
-      z-index: 1;
+      margin-right: 2px;
       top: 80px;
-      left: 0;
       background-color: darkblue;
-      overflow-x: hidden;
-      padding: 20px;
+      padding: 10px;
+      width: 20%;
     }
 
     .side-nav a {
@@ -89,16 +93,31 @@
       color: darkgrey;
       display: block;
       font-size: 18px;
+      text-align: center;
       text-transform: uppercase;
-      padding: 20px;
+      padding: 15px;
+      margin: 10px;
+      border: 2px dashed #dc2f02;
     }
 
     .side-nav a:hover {
       color: #dc2f02;
     }
 
-    section {
-      height: 612px;
+    .table {
+      width: 80%;
+      height: auto;
+    }
+
+    .table {
+      //align-items: center;
+      display: flex;
+    }
+
+    .lead-pic {
+      position: cover;
+      width: 100%;
+      margin-right: 2px;
     }
 
     #ver {
@@ -106,6 +125,5 @@
       padding: 5px 0;
       text-align: center;
       color: white;
-      //float: bottom;
     }
 }
