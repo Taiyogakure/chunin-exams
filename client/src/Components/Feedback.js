@@ -67,11 +67,11 @@ export default function Feedback() {
                             value={state.Qlevel} 
                             onChange={e => change(e)}
                             required />
-                            <textarea name="sugg" type="text" 
-                            placeholder="Suggestion" 
-                            value={state.sugg} 
-                            onChange={e => change(e)}
-                            required ></textarea>
+                            <textarea name="sugg" type="text"
+    placeholder="Suggestion"
+    value={state.sugg}
+    onChange={e => change(e)}
+    required />
                             <button type="submit" onClick={e => onSubmit(e)}>Submit</button>
                         </form>
                     </div>  

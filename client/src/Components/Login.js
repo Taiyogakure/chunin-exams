@@ -1,5 +1,6 @@
 import React from 'react';
 import './forms.scss';
+import { authservice } from '../authservice';
 
 export default class Login extends React.Component {
     state = {
@@ -16,24 +17,12 @@ export default class Login extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
         console.log(this.state);
-        fetch("http://localhost:4000/user/login", {
-            headers: {
-                "Content-Type": "application/json"
-            },
-            method: 'post',
-            body: JSON.stringify(this.state),
-        }).then(res => {
-            console.log(res);
-            return res.json()
-        }).catch(err => {
-                console.log(err);
-                return err.json()
-            }
-        );
-        this.setState({
+        authservice.login(this.state);
+            this.setState({
             email: '',
-            password: ''
+            password: '1'
         })
+        //console.log(authservice.currentUserValue);
     };
 
     render() {

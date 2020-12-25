@@ -1,5 +1,6 @@
 import React from 'react';
 import './forms.scss';
+import { authservice } from '../authservice';
 
 export default class SignUp extends React.Component {
     state = {
@@ -17,18 +18,7 @@ export default class SignUp extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
         console.log(JSON.stringify(this.state));
-        fetch("http://localhost:4000/user/signup", {
-            headers: {
-                "Content-Type": "application/json"
-            },
-            method: 'post',
-            body: JSON.stringify(this.state),
-        }).then(res => {
-            console.log(res);
-            return res.json()
-        }).catch(err =>
-            console.log(err)
-        );
+        authservice.signup(this.state);
         this.setState({
             rollno: '',
             email: '',
