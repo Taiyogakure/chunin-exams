@@ -22,15 +22,16 @@
       height: auto;
       margin-right: 2px;
       top: 0px;
-      background-color: darkblue;
+      background: linear-gradient(135deg, darkblue, white);
       padding: 10px;
       width: 20%;
       position: block;
+      border-radius: 0px 20px 0px 0px;
     }
 
     .side-nav h2{
       display: block;
-      padding: 20px 20px;
+      padding: 50px 20px 30px 20px;
       color: #fff;
       text-align: center;
       text-decoration: none;
@@ -56,11 +57,19 @@
 
     .side-nav a:hover {
       color: #dc2f02;
+      margin-left: 20px;
+      margin-right: 20px;
+      transition: 0.4s;
     }
 
     .side-nav button {
       text-decoration: none;
-      background-color: darkblue;
+      background: rgba( 255, 255, 255, 0.10 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 2.0px );
+      -webkit-backdrop-filter: blur( 2.0px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
       color: darkgrey;
       display: block;
       font-size: 15px;
@@ -69,12 +78,13 @@
       text-transform: uppercase;
       padding: 15px;
       margin: 10px;
-      border: 1px solid #dc2f02;
     }
 
     button:hover, button:focus {
     color: #dc2f02;
     outline: none;
+    margin-left: 20px;
+    transition: 0.4s;
     }
 
     button:active {
