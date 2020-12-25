@@ -10,95 +10,99 @@
     font-family: 'Montserrat',
     sans-serif;
 
-    #logout {
-      border: 2px solid #dc2f02;
-      background-color: #fff;
-      border-radius: 40px;
-      font-size: 13px;
-      font-weight: bold;
-      padding: 10px;
-      margin: 5px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: transform 80ms ease-in;
-      cursor: pointer;
-    }
-  
-    #logout:active {
-      transform: scale(0.95);
-    }
-  
-    #logout:focus {
-      outline: none;
-    }
-  
-    header {
-      position: relative;
-      z-index: 1000;
-      width: 100%;
+    .conts {
       display: flex;
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      height: 25px;
-      padding: 35px 100px;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0px 5px 10px 0px #aaa;
-    }
-  
-    header .logo {
-      color: #2f2f2f;
-      font-size: 24px;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-  
-    header ul {
-      position: relative;
-      display: flex;
-    }
-  
-    header ul li {
-      position: relative;
-      list-style: none;
-    }
-  
-    header ul li a {
-      position: relative;
-      display: inline-block;
-      margin: 0 10px;
-      color: #dc2f02;
-      text-decoration: none;
+      flex-direction: row;
+      height: auto;
+      //margin-bottom: 2px;
+      overflow: auto;
     }
 
     .side-nav {
-      height: 612px;
-      width: 248px;
-      position: fixed;
-      z-index: 1;
-      top: 80px;
-      left: 0;
-      background-color: darkblue;
-      overflow-x: hidden;
-      padding: 20px;
+      height: auto;
+      margin-right: 2px;
+      top: 0px;
+      background: linear-gradient(135deg, darkblue, white);
+      padding: 10px;
+      width: 20%;
+      position: block;
+      border-radius: 0px 20px 0px 0px;
     }
 
+    .side-nav h2{
+      display: block;
+      padding: 50px 20px 30px 20px;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    span {
+      color:  #dc2f02;
+      font-size: 35px;
+    }
     .side-nav a {
       text-decoration: none;
       color: darkgrey;
       display: block;
-      font-size: 18px;
+      font-size: 15px;
+      text-align: center;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      padding: 20px;
+      padding: 15px;
+      margin: 10px;
+      border: 2px dashed #dc2f02;
     }
 
     .side-nav a:hover {
       color: #dc2f02;
+      margin-left: 20px;
+      margin-right: 20px;
+      transition: 0.4s;
     }
 
-    section {
-      height: 612px;
+    .side-nav button {
+      text-decoration: none;
+      background: rgba( 255, 255, 255, 0.10 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 2.0px );
+      -webkit-backdrop-filter: blur( 2.0px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+      color: darkgrey;
+      display: block;
+      font-size: 15px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 15px;
+      margin: 10px;
+    }
+
+    button:hover, button:focus {
+    color: #dc2f02;
+    outline: none;
+    margin-left: 20px;
+    transition: 0.4s;
+    }
+
+    button:active {
+      transform: scale(0.9);
+    }
+
+    .table {
+      width: 80%;
+      height: auto;
+      margin: 10px;
+      align-items: column;
+      display: block;
+    }
+
+    .lead-pic {
+      position: cover;
+      width: 100%;
+      margin-right: 2px;
     }
 
     #ver {
@@ -106,6 +110,6 @@
       padding: 5px 0;
       text-align: center;
       color: white;
-      //float: bottom;
+      width: 100%;
     }
 }
