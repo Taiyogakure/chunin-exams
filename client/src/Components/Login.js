@@ -16,13 +16,11 @@ export default class Login extends React.Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
         authservice.login(this.state);
             this.setState({
             email: '',
-            password: '1'
-        })
-        //console.log(authservice.currentUserValue);
+            password: ''
+        });
     };
 
     render() {

@@ -1,12 +1,7 @@
-//import { BehaviorSubject } from 'rxjs';
-//const currentUserSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('currentUser')));
-
 export const authservice = {
     login,
     signup,
     logout,
-    //currentUser: currentUserSubject.asObservable(),
-    //get currentUserValue () { return currentUserSubject.value }
 };
 
 function login(cred) {
@@ -19,8 +14,9 @@ function login(cred) {
     }).then(res => {
         console.log(res);
         return res.text().then(text => {
-            //localStorage.setItem('currentUser',JSON.stringify(text))
-            return text && JSON.parse(text);})
+            localStorage.setItem('currentUser', JSON.parse(text).token);
+            return text && JSON.parse(text);
+        })
     }).catch(err => {
             console.log(err);
             return err.json()
