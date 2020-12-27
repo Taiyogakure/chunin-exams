@@ -25,7 +25,8 @@ function login(cred) {
 }
 
 function logout() {
-
+    localStorage.setItem('currentUser', null);
+    this.props.history.push('/Components/Login');
 }
 
 function signup(cred){

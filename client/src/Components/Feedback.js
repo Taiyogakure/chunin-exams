@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import './Feedback.scss';
-
+import authservice from '../authservice';
 
 export default function Feedback() {
     const [state, setState] = useState({
@@ -20,14 +20,8 @@ export default function Feedback() {
 
     var onSubmit = (e) => {
         e.preventDefault();
-        console.log(state);
-        setState({
-            stars: 0,
-            ux: '',
-            Qlevel: '',
-            sugg: ''
-        })
-    }
+        authservice.logout();
+    };
 
     
         const [hover, setHover] = useState(null);

@@ -17,13 +17,8 @@ export default class SignUp extends React.Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        console.log(JSON.stringify(this.state));
         authservice.signup(this.state);
-        this.setState({
-            rollno: '',
-            email: '',
-            password: ''
-        })
+        this.props.history.push("/Components/Test");
     };
 
     render() {
