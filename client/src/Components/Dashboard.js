@@ -2,13 +2,7 @@ import React from 'react';
 import Leaderboard from "./Leaderboard";
 import AdminQ from "./AdminQ";
 import './Dashboard.scss';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useRouteMatch
-  } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch } from "react-router-dom";
 
 export default function Dashboard() {
     let match = useRouteMatch();

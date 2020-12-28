@@ -43,6 +43,5 @@ function signup(cred) {
     }).catch(err => {
             return err.json();
         }
-    )
-        ;
+    );
 }
