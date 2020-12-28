@@ -18,7 +18,7 @@ export default class SignUp extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
         authservice.signup(this.state);
-        this.props.history.push("/Components/Test");
+        this.props.history.push("/Test");
     };
 
     render() {

@@ -14,10 +14,10 @@ class App extends Component {
       <main>
         <switch>
           <Route path='/' component={SignUp} exact />
-          <Route path='/Components/Feedback' component={Feedback} />
-          <Route path='/Components/Login' component={Login} />
-          <Route path='/Components/Test' component={Test} />
-          <Route path='/Components/Dashboard' component={Dashboard} />
+          <Route path='/Feedback' component={Feedback} />
+          <Route path='/Login' component={Login} />
+          <Route path='/Test' component={Test} />
+          <Route path='/Dashboard' component={Dashboard} />
         </switch>
       </main>
 

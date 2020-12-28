@@ -17,7 +17,7 @@ export default class Login extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
         authservice.login(this.state);
-        this.props.history.push("/Components/Test");
+        this.props.history.push("/Test");
     };
 
     render() {

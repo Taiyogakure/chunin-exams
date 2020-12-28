@@ -9,7 +9,7 @@ export default function Test() {
                 <a href="#" className="logo">Chunin Exam</a>
                 <ul>
                     <li id="timer">Time Left</li>
-                    <li><button type="submit" id="end"><a href="http://localhost:3000/Components/Feedback">End Test</a></button></li>
+                    <li><button type="submit" id="end"><a href="http://localhost:3000/Feedback">End Test</a></button></li>
                 </ul>
             </header>
             <div id="quest">
