@@ -5,7 +5,7 @@ import Feedback from "./Components/Feedback";
 import Login from "./Components/Login";
 import Test from "./Components/Test";
 import Dashboard from "./Components/Dashboard";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 
 class App extends Component {
