@@ -5,23 +5,22 @@ export const authservice = {
 };
 
 function login(cred) {
-    fetch("http://localhost:4000/user/login", {
+    return fetch("http://localhost:4000/user/login", {
         headers: {
             "Content-Type": "application/json"
         },
         method: 'post',
         body: JSON.stringify(cred),
     }).then(res => {
-        console.log(res);
-        return res.text().then(text => {
+        res.text().then(text => {
             localStorage.setItem('currentUser', JSON.parse(text).token);
-            return text && JSON.parse(text);
-        })
+        });
+        return res;
     }).catch(err => {
-            console.log(err);
             return err.json()
         }
-    );
+    )
+        ;
 }
 
 function logout() {
@@ -29,18 +28,21 @@ function logout() {
     this.props.history.push('/Components/Login');
 }
 
-function signup(cred){
-    fetch("http://localhost:4000/user/signup", {
+function signup(cred) {
+    return fetch("http://localhost:4000/user/signup", {
         headers: {
             "Content-Type": "application/json"
         },
         method: 'post',
         body: JSON.stringify(cred),
     }).then(res => {
-        console.log(res);
-        return res.json()
-    }).catch(err =>
-        console.log(err)
-    );
-
+        res.text().then(text => {
+            localStorage.setItem('currentUser', JSON.parse(text).token);
+        });
+        return res
+    }).catch(err => {
+            return err.json();
+        }
+    )
+        ;
 }

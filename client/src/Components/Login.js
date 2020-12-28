@@ -1,6 +1,7 @@
 import React from 'react';
 import './forms.scss';
 import { authservice } from '../authservice';
+import {catchError} from "rxjs/operators";
 
 export default class Login extends React.Component {
     state = {
@@ -14,11 +15,14 @@ export default class Login extends React.Component {
         });
     };
 
-    onSubmit = (e) => {
+    onSubmit = async (e) => {
         e.preventDefault();
-        authservice.login(this.state);
-        this.props.history.push("/Test");
-    };
+        let res = await authservice.login(this.state);
+        if (res.status === 200)
+            this.props.history.push("/Test");
+        else
+            console.log(res.status);
+    }
 
     render() {
         return(
