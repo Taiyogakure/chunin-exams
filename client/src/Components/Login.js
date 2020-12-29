@@ -1,7 +1,6 @@
 import React from 'react';
 import './forms.scss';
 import { authservice } from '../authservice';
-import {catchError} from "rxjs/operators";
 
 export default class Login extends React.Component {
     state = {
