@@ -36,16 +36,17 @@ export default class SignUp extends React.Component {
                                placeholder="Roll Number"
                                value={this.state.rollno}
                                onChange={e => this.change(e)}
-                               required/>
+                               />
                         <input name="email" type="email"
                                placeholder="Email"
                                value={this.state.email}
                                onChange={e => this.change(e)}
-                               required/>
+                               />
                         <input name="password" type="password" placeholder="Password"
                                value={this.state.password}
                                onChange={e => this.change(e)}
-                               required/>
+                               />
+                               <i class="fa fa-eye password-icon"></i>
                         <button type="submit" onClick={e => this.onSubmit(e)}>Sign Up</button>
                     </form>
                 </div>

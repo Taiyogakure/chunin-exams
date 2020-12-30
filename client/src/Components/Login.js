@@ -40,6 +40,7 @@ export default class Login extends React.Component {
                             value={this.state.password} 
                             onChange={e => this.change(e)}
                             required />
+                            <div><i class="fad fa-eye"></i>"></div>
                             <button type="submit" onClick={e => this.onSubmit(e)}>Login</button>
                         </form>
                     </div>

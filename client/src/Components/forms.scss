@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
+@import url('https://../node_modules/font-awesome/css/font-awesome.min.css'); 
 #auth {
 	* {
 		box-sizing: border-box;
@@ -73,6 +73,11 @@
 		padding: 12px 15px;
 		margin: 8px 0;
 		width: 100%;
+	}
+
+	.password-icon {
+		position: absolute;
+
 	}
 
 	textarea {
