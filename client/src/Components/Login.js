@@ -21,7 +21,7 @@ export default class Login extends React.Component {
             this.props.history.push("/Test");
         else
             console.log(res.status);
-    }
+    };
 
     render() {
         return(

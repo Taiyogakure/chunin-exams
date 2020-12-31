@@ -1,4 +1,3 @@
-import {render} from '@testing-library/react';
 import React from 'react';
 import Question from "./Question";
 import './Test.scss';

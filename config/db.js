@@ -1,7 +1,6 @@
 //FILENAME : db.js
 const mongoose = require("mongoose");
-// Replace this with your MONGOURI.
-const MONGOURI = "mongodb://localhost:27017/chunin_db";
+const MONGOURI = process.env.MONGO;
 const InitiateMongoServer = async () => {
     try {
         await mongoose.connect(MONGOURI, {
