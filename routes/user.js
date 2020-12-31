@@ -255,7 +255,7 @@ function testCode(req, res) {
  */
 router.get("/Ques", auth,
     async (req, res) => {
-        Ques.find({}, {"ans": false},
+        Ques.find({}, {"ans": false, "_id": false, "__v": false},
             function (err, result) {
                 if (err) throw err;
                 res.status(200).json({

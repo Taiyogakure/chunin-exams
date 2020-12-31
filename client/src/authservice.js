@@ -17,7 +17,7 @@ function login(cred) {
         });
         return res;
     }).catch(err => {
-            return err.json()
+            return err;
         }
     )
         ;
@@ -41,7 +41,7 @@ function signup(cred) {
         });
         return res
     }).catch(err => {
-            return err.json();
+            return err;
         }
     );
 }
