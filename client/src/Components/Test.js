@@ -10,22 +10,38 @@ export default function Test() {
 
     return (
         <body id="exam">
-            <div id="lefty">
+            <header>
+                <div className="logo">Chunin Exam</div>
                 <ul>
-                {obj.result.map(ele => 
                     <li>
-                    <Link to={`${match.url}/${ele.qid}`}>{ele.qid}</Link>
-                    </li>)
-                }
+                        <a className="timer">
+                            Time Left
+                        </a>
+                        <a href="#" className="end">
+                            End Test
+                        </a>
+                    </li>
                 </ul>
+            </header>
+            <div className="quest">
+                <div id="lefty">
+                    <p>MCQs</p>
+                    <ul>
+                    {obj.result.map(ele => 
+                        <li>
+                            <Link to={`${match.url}/${ele.qid}`}>{ele.qid}</Link>
+                        </li>)
+                    }
+                    </ul>
+                </div>
+                <Switch>
+                    {obj.result.map(ele => 
+                    (<Route path={`${match.url}/${ele.qid}`} exact>
+                    <Question source={ele.question} keyy={ele.qid} options={ele.testcase}/></Route>
+                    ))}
+                </Switch>
             </div>
-            <Switch>
-                
-                {obj.result.map(ele => 
-                (<Route path={`${match.url}/${ele.qid}`} exact>
-                <Question source={ele.question} keyy={ele.qid} options={ele.testcase}/></Route>
-                ))}
-            </Switch>
+            <footer id="ver">Version 1.0</footer>
         </body>
     );
 }
