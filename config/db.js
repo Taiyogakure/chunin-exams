@@ -1,7 +1,6 @@
 //FILENAME : db.js
-const config = require('./config');
 const mongoose = require("mongoose");
-const MONGOURI = config.MONGO;
+const MONGOURI = process.env.MONGO;
 const InitiateMongoServer = async () => {
     try {
         await mongoose.connect(MONGOURI, {
