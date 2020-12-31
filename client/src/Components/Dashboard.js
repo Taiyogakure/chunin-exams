@@ -16,7 +16,7 @@ export default function Dashboard() {
           <nav>
             <ul>
               <li>
-                <Link to={`${match.url}/`}>Questions</Link>
+                <Link to={`${match.url}/`}>AdminQ</Link>
               </li>
               <li>
                 <Link to={`${match.url}/leaderboard`}>Leaderboard</Link>

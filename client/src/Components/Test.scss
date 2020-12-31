@@ -9,6 +9,14 @@
 
   font-family: 'Montserrat',
   sans-serif;
+  background: url("ZZZZZ510.jpg") no-repeat;
+    background-size: cover;
+  width: auto;
+  height: 722px;
+
+  #lefty {
+    color: white;
+  }
 
   #end {
     border: 2px solid #dc2f02;
@@ -53,23 +61,6 @@
     text-decoration: none;
   }
 
-  ul {
-    position: relative;
-    display: flex;
-  }
-
-  ul li {
-    position: relative;
-    list-style: none;
-  }
-
-  ul li a {
-    position: relative;
-    display: inline-block;
-    margin: 0 10px;
-    color: #dc2f02;
-    text-decoration: none;
-  }
 }
 
   #timer {
@@ -82,40 +73,15 @@
     color: red;
   }
 
-  #quest {
-    display: flex;
-    background: url("ZZZZZ510.jpg") no-repeat;
-	  background-size: cover;
-  }
-
-  #quest div {
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    margin: 10px;
-    padding: 30px;
-    font-size: 20px;
-  }
-
   #lefty{
-    width: 30%;
+    width: 20%;
+    margin: 10px;
     max-height: 590px;
     display: flex;
-    overflow: auto; 
+    overflow: auto;
+    background-color: #dc2f02; 
   }
 
-  #lefty a {
-    color: white;
-    background-color: transparent;
-    text-decoration: none;
-    padding-bottom: 5px;
-  }
-
-  ol {
-    color: white;
-  }
 
   #righty {
     color: white;
@@ -123,14 +89,6 @@
     max-height: 590px;
     position: relative;
     float: right;
-  }
-
-  section {
-    margin: 10px;
-  }
-
-  section ul li {
-    list-style: none;
   }
 
   .opt {
@@ -166,27 +124,7 @@
     padding: 5px 0;
     text-align: center;
     color: white;
-    float: down;
+    margin-top: 672px;
   }
-
-  ::-webkit-scrollbar {
-		width: 12px;
-	}
-
-	::-webkit-scrollbar-track {
-		width: 12px;
-		background: white;
-		border-left: 0 solid white;
-		border-right: 0 solid white;
-	}
-
-	::-webkit-scrollbar-thumb {
-		background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(54,54,226,1) 35%, rgba(0,212,255,1) 100%);
-		width: 0;
-		height: 25%;
-		transition: 0.5s ease;
-		cursor: pointer;
-	}
 
 }
