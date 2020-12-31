@@ -75,10 +75,6 @@
 		width: 100%;
 	}
 
-	.password-icon {
-		position: absolute;
-
-	}
 
 	textarea {
 		background: rgba(255, 255, 255, 0.40);
@@ -94,6 +90,17 @@
 
 	input[type="radio"] {
 		display: none;
+	}
+
+	.password-icon {
+		margin-top: 125px;
+		margin-left: 190px;
+		position: fixed;
+	}
+
+	#passs {
+		margin-top: 182px;
+		margin-right: -35px;
 	}
 
 	.star {

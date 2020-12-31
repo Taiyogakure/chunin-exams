@@ -34,13 +34,11 @@ export default class Login extends React.Component {
                             <input name="email" type="email" 
                             placeholder="Email" 
                             value={this.state.email} 
-                            onChange={e => this.change(e)}
-                            required />
+                            onChange={e => this.change(e)}/>
+
                             <input name="password" type="password" placeholder="Password" 
                             value={this.state.password} 
-                            onChange={e => this.change(e)}
-                            required />
-                            <div><i class="fa fa-eye password-icon"></i></div>
+                            onChange={e => this.change(e)}/><i class="fa fa-eye password-icon"></i>
                             <button type="submit" onClick={e => this.onSubmit(e)}>Login</button>
                         </form>
                     </div>

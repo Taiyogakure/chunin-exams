@@ -17,7 +17,7 @@ export default function Test() {
                         <a className="timer">
                             Time Left
                         </a>
-                        <a href="#" className="end">
+                        <a href="http://localhost:3000/Feedback" className="end">
                             End Test
                         </a>
                     </li>
